@@ -1,0 +1,17 @@
+[Unit]
+Description=Mongo Hybrid Events REST Service
+After=network.target
+
+[Service]
+Type=simple
+User={{ app_user }}
+Group={{ app_group }}
+WorkingDirectory={{ install_dir }}
+
+EnvironmentFile=/etc/{{ service_name }}.env
+ExecStart=/usr/bin/java -jar {{ jar_dest }}
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

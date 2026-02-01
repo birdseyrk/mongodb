@@ -1,0 +1,7 @@
+- name: Deploy mongo hybrid events REST service
+  hosts: app_servers
+  become: true
+  vars:
+    jar_path: "{{ jar_path | default('../target/mongo-hybrid-events-1.0.0.jar') }}"
+  roles:
+    - role: mongo_hybrid_app

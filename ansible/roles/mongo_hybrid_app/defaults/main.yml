@@ -1,0 +1,17 @@
+app_name: mongo-hybrid
+service_name: mongo-hybrid
+
+app_user: mongoapp
+app_group: mongoapp
+
+install_dir: /opt/mongo-hybrid
+jar_dest: /opt/mongo-hybrid/mongo-hybrid-events.jar
+
+app_port: 8080
+app_bind_host: 0.0.0.0
+
+mongo_host: 192.168.1.105
+mongo_port: 27017
+mongo_db: hybriddb2
+mongo_collection: hybrid_events
+mongo_user: mongoUser1
